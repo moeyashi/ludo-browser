@@ -1,0 +1,12 @@
+name = "ludo-partyserver"
+main = "src/server/index.ts"
+compatibility_date = "2025-11-30"
+
+
+[[durable_objects.bindings]]
+name = "Ludo"
+class_name = "Ludo"
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_sqlite_classes = ["Ludo"]
