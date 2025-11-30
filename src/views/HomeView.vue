@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { CreateRoom, SendMessage } from '@/shared/types'
+import { SendMessage } from '@/shared/types'
 import PartySocket from 'partysocket'
 import { parse } from 'valibot'
 import { onUnmounted, ref, useId } from 'vue'
 
 const socket = new PartySocket({
-  host: window.location.host,
+  host: import.meta.env.VITE_PARTY_SERVER_HOST || window.location.host,
   id: prompt('Enter your name:') || 'taro',
   room: 'my-room',
   party: 'ludo',
