@@ -1,0 +1,10 @@
+# 参考: https://github.com/naritomo08/terraform_docker_public/blob/main/docker-compose.yml
+services:
+  terraform:
+    image: hashicorp/terraform
+    # env_file:
+    #   - .env
+    volumes:
+      - ./:/terraform
+    working_dir: /terraform
+    platform: linux/amd64

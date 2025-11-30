@@ -1,0 +1,6 @@
+bucket    = "ludo-terraform"
+endpoints = {
+  s3 = "<your-cloudflare-r2-endpoint>"
+}
+access_key = "<your-access-key-id>"
+secret_key = "<your-secret-access-key>"
